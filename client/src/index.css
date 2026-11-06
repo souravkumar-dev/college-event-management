@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { @apply bg-page text-ink antialiased; }
+
+/* Offset anchor targets so sticky nav doesn't cover them */
+.scroll-section { scroll-margin-top: 72px; }
+
+@layer components {
+  .input { @apply w-full border border-slate-300 rounded-md px-3 py-2.5 text-sm outline-none bg-white focus:border-brand-500 focus:ring-2 focus:ring-brand-50; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2.5 text-sm font-medium transition disabled:opacity-60 disabled:cursor-not-allowed; }
+  .btn-primary { @apply btn bg-brand-500 text-white hover:bg-brand-600; }
+  .btn-outline { @apply btn border border-brand-500 text-brand-600 bg-white hover:bg-brand-50; }
+  .btn-danger { @apply btn border border-danger text-danger bg-white hover:bg-red-50; }
+  .card { @apply bg-white rounded-xl shadow-sm border border-slate-100; }
+  .label { @apply block text-sm font-medium text-ink mb-1; }
+}
